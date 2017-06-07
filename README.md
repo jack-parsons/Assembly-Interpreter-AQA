@@ -6,7 +6,7 @@ for AQA instruction set:
 http://filestore.aqa.org.uk/resources/computing/AQA-75162-75172-ALI.PDF
 
 
-Notes:
+Notes for this interpreter:
 - // can be used for comments.
 - HALT isn't necessary at the bottom of the file as it terminates automatically.
 - Memory locations may be accessed with #n or Rn
