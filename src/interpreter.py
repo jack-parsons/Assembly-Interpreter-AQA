@@ -122,31 +122,31 @@ class Interpreter:
     def and_(self, rd, rn, op2):
         """AND Rd, Rn, <operand2>   Perform a bitwise logical AND operation between the value in register n
          and the value specified by <operand2> and store the result in register d."""
-        self.reg_set(rd, self.get_val(rn) & self.get_val(op2))
+        self.reg_set(self.get_reg_num(rd), self.get_val(rn) & self.get_val(op2))
 
     def orr(self, rd, rn, op2):
         """AND Rd, Rn, <operand2>   Perform a bitwise logical AND operation between the value in register n
          and the value specified by <operand2> and store the result in register d."""
-        self.reg_set(rd, self.get_val(rn) | self.get_val(op2))
+        self.reg_set(self.get_reg_num(rd), self.get_val(rn) | self.get_val(op2))
 
     def eor(self, rd, rn, op2):
         """EOR Rd, Rn, <operand2>   Perform a bitwise logical XOR (exclusive or) operation between the value
          in register n and the value specified by <operand2> and store the result in register d."""
-        self.reg_set(rd, self.get_val(rn) & self.get_val(op2))
+        self.reg_set(self.get_reg_num(rd), self.get_val(rn) ^ self.get_val(op2))
 
     def mvn(self, rd, rn):
         """MVN Rd, <operand2>   Perform a bitwise logical NOT operation on the value specified by <operand2>
          and store the result in register d."""
-        self.reg_set(rd, ~self.get_val(rn))
+        self.reg_set(self.get_reg_num(rd), ~self.get_val(rn))
 
     def lsl(self, rd, rn, op2):
         """LSL Rd, Rn, <operand2>   Logically shift left the value stored in register n
          by the number of bits specified by <operand2> and store the result in register d."""
-        self.reg_set(rd, self.get_val(rn) << self.get_val(op2))
+        self.reg_set(self.get_reg_num(rd), self.get_val(rn) << self.get_val(op2))
 
     def lsr(self, rd, rn, op2):
         """LSR Rd, Rn, <operand2>   Logically shift right the value stored in register n by the number of bits specified by <operand2> and store the result in register d."""
-        self.reg_set(rd, self.get_val(rn) >> self.get_val(op2))
+        self.reg_set(self.get_reg_num(rd), self.get_val(rn) >> self.get_val(op2))
 
     def halt(self):
         """HALT     Stops the execution of the program."""
