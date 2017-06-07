@@ -1,0 +1,11 @@
+add:
+ADD R2 R2 #1
+CMP R2 #100
+BNE add
+
+sub:
+SUB R2 R2 #1
+CMP R2 #0
+BNE sub
+
+HALT
