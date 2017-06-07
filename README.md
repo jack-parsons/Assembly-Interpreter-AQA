@@ -16,7 +16,7 @@ Notes for this interpreter:
 
 This is a basic interpreter using the instruction set of the AQA exam.
 Two tests are currently available as a demonstration.
-There is minimal syntax checking, but the debug info gives information that can be used to find issues.
+There is minimal syntax checking, but the debug info gives information will usually raise an error if something is wrong.
 If you do find any issues, you can create an issue on Github, or email me directly.
 
 To run your code, run src/interpreter.py and type your filename (the file needs to be in the src folder)
