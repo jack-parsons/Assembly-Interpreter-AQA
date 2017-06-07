@@ -9,7 +9,7 @@ http://filestore.aqa.org.uk/resources/computing/AQA-75162-75172-ALI.PDF
 Notes for this interpreter:
 - // can be used for comments.
 - HALT isn't necessary at the bottom of the file as it terminates automatically.
-- Memory locations may be accessed with #n or Rn
+- Memory locations may be accessed with #n or registers with Rn
 - To change the memory size or number of registers, change the constants at the top of interpreter.py
 - Labels need ':' at the end
 - Labels must be unique
