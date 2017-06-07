@@ -1,0 +1,18 @@
+// Save the triangle into memory
+
+loop:
+
+// Add
+ADD R2 R2 R1
+
+// Store the contents of R2 in the memory address stored in R1
+STR R2 R1
+
+// Check R1 not equal to 19 (so no memory error)
+CMP R1 #19
+
+// Increment R1 by 1
+ADD R1 R1 #1
+
+// Branch back to 'loop' if and only if R1 is not equal to 19
+BNE loop

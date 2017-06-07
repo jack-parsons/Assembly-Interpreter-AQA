@@ -8,7 +8,7 @@ MEMSIZE = 20
 
 class Interpreter:
 
-    def __init__(self, filename="test.txt"):
+    def __init__(self, filename="triangle numbers.txt"):
         self.opcodes = {
             "LDR": self.ldr,
             "STR": self.sto,
@@ -169,13 +169,13 @@ class Interpreter:
             line = self.code[self.current_line]
             self.current_line += 1
             line = line.strip(whitespace)
-            if line[0] == line[1] == "//":
-                pass
-            elif ":" in line:
+            if ":" in line:
                 self.labels[line[:line.index(":")]] = self.current_line
             elif len(line) > 0:
                 split_line = line.split()
-                if split_line[0][0] == "B":
+                if line[0] == line[1] == "/":
+                    pass
+                elif split_line[0][0] == "B":
                     self.current_op, *self.current_operands = split_line
                     self.print_instr()
                     self.print_regs()
@@ -187,8 +187,10 @@ class Interpreter:
                     self.print_instr()
                     self.print_regs()
                     self.print_memory()
+                else:
+                    raise SyntaxError("Invalid op code line: %i"%self.current_line)
                 print()
 
 
 if __name__ == '__main__':
-    Interpreter(input("Enter file name")).run()
+    Interpreter(input("Enter file name: ")).run()

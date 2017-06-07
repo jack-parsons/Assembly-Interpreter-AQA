@@ -11,11 +11,14 @@ Notes:
 - HALT isn't necessary at the bottom of the file as it terminates automatically.
 - Memory locations may be accessed with #n or Rn
 - To change the memory size or number of registers, change the constants at the top of interpreter.py
+- Labels need ':' at the end
+- Labels must be unique
 
 This is a basic interpreter using the instruction set of the AQA exam.
 There is minimal syntax checking, but the debug info gives information that can be used to find issues.
 If you do find any issues, you can create an issue on Github, or email me directly.
 
+To run your code, run src/interpreter.py and type your filename (the file needs to be in the src folder)
 
 Jack Parsons
 7/6/17
