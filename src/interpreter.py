@@ -169,7 +169,9 @@ class Interpreter:
             line = self.code[self.current_line]
             self.current_line += 1
             line = line.strip(whitespace)
-            if ":" in line:
+            if line[0] == line[1] == "//":
+                pass
+            elif ":" in line:
                 self.labels[line[:line.index(":")]] = self.current_line
             elif len(line) > 0:
                 split_line = line.split()
