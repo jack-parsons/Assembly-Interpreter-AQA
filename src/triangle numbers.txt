@@ -16,3 +16,6 @@ ADD R1 R1 #1
 
 // Branch back to 'loop' if and only if R1 is not equal to 19
 BNE loop
+
+MOV R3 #7
+LSL R3 R3 #12

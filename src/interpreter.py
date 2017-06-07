@@ -21,7 +21,7 @@ class Interpreter:
             "ORR": self.orr,
             "EOR": self.eor,
             "MVN": self.mvn,
-            "LSL:": self.lsl,
+            "LSL": self.lsl,
             "LSR": self.lsr,
             "HALT": self.halt
         }
