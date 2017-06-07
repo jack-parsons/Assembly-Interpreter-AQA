@@ -15,6 +15,7 @@ Notes:
 - Labels must be unique
 
 This is a basic interpreter using the instruction set of the AQA exam.
+Two tests are currently available as a demonstration.
 There is minimal syntax checking, but the debug info gives information that can be used to find issues.
 If you do find any issues, you can create an issue on Github, or email me directly.
 
